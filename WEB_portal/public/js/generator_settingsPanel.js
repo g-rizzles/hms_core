@@ -66,6 +66,7 @@ async function generateCameraSettingsTile(data, idx)
     // Tile form parts
     let tileContainer = document.createElement('div');
     tileContainer.classList.add('settings-tile');
+	tileContainer.id = `cameras[${idx}]`;
 
     let input_id = document.createElement('input');
     input_id.name = `cameras[${idx}][id]`;
@@ -109,7 +110,7 @@ async function generateCameraSettingsTile(data, idx)
     deleteCamButton.classList.add('settings-button');
     deleteCamButton.classList.add('delete');
     deleteCamButton.innerText = 'Remove Camera';
-    deleteCamButton.onclick = function() { /* Call cam delete function */  };
+    deleteCamButton.onclick = function() { /* Call cam delete function */ document.getElementById(`cameras[${idx}]`).remove(); };
     tileContainer.appendChild(deleteCamButton);
 
     return tileContainer;
@@ -243,6 +244,7 @@ async function generateContactSettingsTile(data, idx)
     // Tile form parts
     let tileContainer = document.createElement('div');
     tileContainer.classList.add('settings-tile');
+	tileContainer.id = `contacts[${idx}]`;
 
     let input_id = document.createElement('input');
     input_id.name = `contacts[${idx}][id]`;
@@ -296,7 +298,7 @@ async function generateContactSettingsTile(data, idx)
     deleteContactButton.classList.add('settings-button');
     deleteContactButton.classList.add('delete');
     deleteContactButton.innerText = 'Remove Contact';
-    deleteContactButton.onclick = function() { /* Call contact delete function */ };
+    deleteContactButton.onclick = function() { /* Call contact delete function */ document.getElementById(`contacts[${idx}]`).remove(); };
     tileContainer.appendChild(deleteContactButton);
 
     return tileContainer;
