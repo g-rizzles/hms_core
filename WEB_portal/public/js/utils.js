@@ -387,7 +387,7 @@ function generate_startCamStreamCmd(camId)
     // \todo generate authcode
     let camCmd = {
         meta: {
-            authcode: "CB35695F7916425F24DCA418EAEC992C97B20C36D12E24991669D44F0D7AFD17",
+            authcode: "cb35695f7916425f24dca418eaec992c97b20c36d12e24991669d44f0d7afd17",
             camId: `${camId}`,
         },
         _C: 72,
@@ -402,7 +402,7 @@ function generate_stopCamStreamCmd(camId)
     // \todo generate authcode
     let camCmd = {
         meta: {
-            authcode: "CB35695F7916425F24DCA418EAEC992C97B20C36D12E24991669D44F0D7AFD17",
+            authcode: "cb35695f7916425f24dca418eaec992c97b20c36d12e24991669d44f0d7afd17",
             camId: `${camId}`,
         },
         _C: 73,
@@ -417,7 +417,7 @@ function generate_getCamConfig(camId)
     // \todo generate authcode
     let camCmd = {
         meta: {
-            authcode: "CB35695F7916425F24DCA418EAEC992C97B20C36D12E24991669D44F0D7AFD17",
+            authcode: "cb35695f7916425f24dca418eaec992c97b20c36d12e24991669d44f0d7afd17",
             camId: `${camId}`,
         },
         _C: 67,
