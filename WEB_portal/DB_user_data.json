@@ -1,11 +1,11 @@
 {
   "users": [
     {
-      "id": "testUser1",
+      "id": "home",
       "preferences": {
         "id": "preferences",
-        "userName": "testUser1",
-        "name": "Chuck Finley",
+        "userName": "home",
+        "name": "Fernando Rizzo",
         "avatar": "bored-svgrepo-com.svg"
       },
       "configs": {
@@ -13,7 +13,7 @@
         "localSecureZones": [
           {
             "id": 1,
-            "url": "ws://192.168.2.225:3000",
+            "url": "ws://hms_core:3000",
             "salt": "AppleBagleCelereyDurrian"
           }
         ]
