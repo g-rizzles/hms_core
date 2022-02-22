@@ -18,7 +18,7 @@ const DEBUG = true;
 const upload = multer();
 const app = new express();
 const jsonServer = jsonDataServer.create();
-const jsonRouter = jsonDataServer.router(__dirname + '\\DB_user_data.json');
+const jsonRouter = jsonDataServer.router(__dirname + '/DB_user_data.json');
 const jsonMiddlewares = jsonDataServer.defaults();
 
 /* Configure json database server */
