@@ -109,7 +109,7 @@ async function generateCameraSettingsTile(data, idx)
     deleteCamButton.classList.add('settings-button');
     deleteCamButton.classList.add('delete');
     deleteCamButton.innerText = 'Remove Camera';
-    deleteCamButton.onclick = function() { /* Call cam delete function */ };
+    deleteCamButton.onclick = function() { /* Call cam delete function */  };
     tileContainer.appendChild(deleteCamButton);
 
     return tileContainer;
@@ -231,7 +231,7 @@ async function generateAlertSettingsTile(data, idx)
     deleteAlertButton.classList.add('settings-button');
     deleteAlertButton.classList.add('delete');
     deleteAlertButton.innerText = 'Remove Alert';
-    deleteAlertButton.onclick = function() { /* Call alert delete function */ };
+    deleteAlertButton.onclick = function() { /* Call alert delete function */ this.delete(); };
     tileContainer.appendChild(deleteAlertButton);
 
     return tileContainer;
