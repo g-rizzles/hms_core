@@ -120,6 +120,7 @@ async function generateAlertSettingsTile(data, idx)
     // Tile form parts
     let tileContainer = document.createElement('div');
     tileContainer.classList.add('settings-tile');
+	tileContainer.id = `alerts[${idx}]`;
 
     let input_id = document.createElement('input');
     input_id.name = `alerts[${idx}][id]`;
@@ -231,7 +232,7 @@ async function generateAlertSettingsTile(data, idx)
     deleteAlertButton.classList.add('settings-button');
     deleteAlertButton.classList.add('delete');
     deleteAlertButton.innerText = 'Remove Alert';
-    deleteAlertButton.onclick = function() { /* Call alert delete function */ this.delete(); };
+    deleteAlertButton.onclick = function() { /* Call alert delete function */ document.getElementById(`alerts[${idx}]`).remove(); };
     tileContainer.appendChild(deleteAlertButton);
 
     return tileContainer;
