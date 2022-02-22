@@ -16,7 +16,7 @@ const MIN_CODE = -1;
 const DEBUG = true;
 
 /* Operational paramters */
-var config = JSON.parse(fs.readFileSync('config.json', 'utf8'));
+var config = JSON.parse(fs.readFileSync('./WEB_local/config.json', 'utf8'));
 //const userHash = crypto.createHash('sha256').update(config.user).digest('hex');
 //const passHash = crypto.createHash('sha256').update(config.pass).digest('hex');
 const authHash = crypto.createHash('sha256').update(config.user.concat(config.salt.concat(config.pass))).digest('hex');;
