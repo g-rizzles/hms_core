@@ -377,7 +377,8 @@ function parseFormKeyValPairsIntoArrayOfObjects(data, name)
 
         // Assign val to correct idx / data field
         try { parsed[idx][fields[1]] = val; }
-		catch(err) {parsed[idx][fields[1]] = {};  }
+		
+		console.log(parsed);
     }
 
     return parsed;
