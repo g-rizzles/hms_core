@@ -52,13 +52,13 @@
       ],
       "cameras": [
         {
-          "id": "6969420",
+          "id": "000001",
           "alive": true,
           "nickname": "Loft",
           "avatar": "security-camera-svgrepo-com.svg"
         },
         {
-          "id": "ghifjk",
+          "id": "000002",
           "alive": false,
           "nickname": "Larry's Office",
           "avatar": "security-camera-svgrepo-com (1).svg"
