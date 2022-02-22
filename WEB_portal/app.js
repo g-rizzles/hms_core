@@ -11,7 +11,7 @@ const multer = require('multer');
 /* Operational constants */
 const jsonServerPort = 3020;
 const httpPort = 80;
-const ip = 'localhost';
+const ip = 'hms_core';
 const DEBUG = true;
 
 /* Objects */

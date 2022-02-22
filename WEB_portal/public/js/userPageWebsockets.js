@@ -1,4 +1,4 @@
-const portalUrl = 'http://192.168.2.225:80';
+const portalUrl = 'http://hms_core:80';
 const DEBUG = true;
 var config;
 var camDataWebsocket;

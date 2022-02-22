@@ -3,5 +3,5 @@
     "pass": "rizzo",
     "salt": "AppleBagleCelereyDurrian",
     "maxClients": 2,
-    "portalUrl": "http://localhost:80"
+    "portalUrl": "http://hms_core:80"
 }
