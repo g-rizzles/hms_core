@@ -1,0 +1,56 @@
+//- camStat.pug
+include camStat
+
+//- camTile.pug
+include camTile
+
+//- home.pug
+doctype html 
+html 
+    head
+        link(rel="stylesheet" href="/css/hmsWebServerStyle.css")
+        script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js")
+        script(src="/js/utils.js")
+        script(src="/js/appClientSide.js")
+        script(src="/js/generator_helpPanel.js")
+        script(src="/js/generator_logPanel.js")
+        script(src="/js/generator_settingsPanel.js") 
+        script(src="/js/userPageWebsockets.js")
+        script(src="/js/camTile.js") 
+        title Test Page
+    body 
+        include head
+
+        //- Development container
+        div.content-container#devsec 
+            input(id='thresh' type="number", name="thresh")
+            button(type='button' onclick='testRadarThresh(document.getElementById("thresh").valueAsNumber)') Change Radar Thresh
+            button(type='button' onclick='testGetConfigs()') Get Camera Configuration
+            button(type='button' onclick='testStartStream()') Start Video 
+            button(type='button' onclick='testStopStream()') Stop Video
+            img(id='live')
+
+        //- Content container
+        div.content-container#content
+            div.user-col#user-panel
+                div.user-icon#user-icon
+                    img.user-icon(src="/img/icons/" + preferences.avatar, alt="User Avatar")
+                div
+                    h3(style={'text-align':'center'})= 'Welcome, ' + preferences.name + '!' 
+                hr
+                div.user-options#user-options
+                    div.user-option#alert-log(onclick='onclick_alertLog();') Alert Log
+                    div.user-option#settings(onclick='onclick_settings();') User Settings
+                    div.user-option#manage-cameras(onclick='onclick_manageCameras();') Manage Cameras
+                    div.user-option#manage-alerts(onclick='onclick_manageAlerts();') Manage Alerts
+                    div.user-option#manage-notifyees(onclick='onclick_manageNotifyees();') Manage Notifyees
+                    div.user-option#help(onclick='onclick_help();') Help
+            div.cam-col#cam-panel
+                div.content-container#stream-content
+                    div.stream-tile#stream-tile(hidden)
+                        img.stream-img#stream-img
+                div.content-container#cam-content
+                    each cam in cameras
+                        +camTile(cam)
+                    else
+                        div.user-option(onclick='switchPageContext(\'cameras\',\'none\')') Add Some Cameras!

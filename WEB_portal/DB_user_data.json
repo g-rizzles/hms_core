@@ -1,0 +1,69 @@
+{
+  "users": [
+    {
+      "id": "testUser1",
+      "preferences": {
+        "id": "preferences",
+        "userName": "testUser1",
+        "name": "Chuck Finley",
+        "avatar": "bored-svgrepo-com.svg"
+      },
+      "configs": {
+        "id": "configs",
+        "localSecureZones": [
+          {
+            "id": 1,
+            "url": "ws://192.168.2.225:3000",
+            "salt": "AppleBagleCelereyDurrian"
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "1",
+          "name": "Gabriel Rizzo",
+          "phone": "708-209-0008",
+          "email": "togaberizzo@gmail.com"
+        },
+        {
+          "id": "2",
+          "name": "Hill Belfi",
+          "phone": "404-905-0351",
+          "email": "hillbelfi@gmail.com"
+        }
+      ],
+      "alerts": [
+        {
+          "id": "1",
+          "name": "Test Alert 1",
+          "contact": "2,1",
+          "camera": "6969420",
+          "methods": "phone,email",
+          "triggers": ""
+        },
+        {
+          "id": "2",
+          "name": "Test Alert 3",
+          "contact": "2",
+          "camera": "",
+          "methods": "phone,email",
+          "triggers": ""
+        }
+      ],
+      "cameras": [
+        {
+          "id": "6969420",
+          "alive": true,
+          "nickname": "Loft",
+          "avatar": "security-camera-svgrepo-com.svg"
+        },
+        {
+          "id": "ghifjk",
+          "alive": false,
+          "nickname": "Larry's Office",
+          "avatar": "security-camera-svgrepo-com (1).svg"
+        }
+      ]
+    }
+  ]
+}

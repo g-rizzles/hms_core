@@ -1,0 +1,17 @@
+{
+  "name": "web_local",
+  "version": "1.0.0",
+  "description": "HMS client secured zone local camera and HMS webportal interface server",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gabriel Rizzo",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "express": "^4.17.2",
+    "rocky": "^0.4.16",
+    "ws": "^8.4.0"
+  }
+}

@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta content="HTML, CSS, JavaScript">
+		<meta name="description" content="Home monitoring system webserver index page.">
+		<meta name="author" content="RizzoTECH">
+		<!--<meta http-equiv="refresh" content="5">-->
+		<title>Home Monitoring System Webserver</title>
+		<link rel="stylesheet" href="../css/hmsWebServerStyle.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="../js/camTile.js"></script>
+	</head>
+	<body>
+		<div id="header">
+			<h1 style="padding-left:20px">Home Monitoring System Webserver</h1>
+		</div>
+		<div id="content" class="content-container">
+			<div id="user-panel" class="user-col">
+				<div id="user-icon" class="user-icon" onclick="window.location='./settings?user';">
+					<img class="user-icon-img" src="img/icons/arrogant-svgrepo-com.svg">
+				</div>
+				<div>
+					<h3 style="text-align: center;">Welcome!</h3>
+					<hr>
+				</div>
+				<div id="user-options" class="user-options">
+					<div class="user-option">Alert Log</div>
+					<div class="user-option">Camera Status</div>
+					<div class="user-option">Settings</div>
+					<div class="user-option">Manage Cameras</div>
+					<div class="user-option">Manage Alerts</div>
+					<div class="user-option">Manage Notifyees</div>
+					<div class="user-option" onclick="camTest()">Help</div>
+				</div>
+			</div>
+			<div id="cam-panel" class="cam-col">
+				<div id="cam-content" class="content-container">
+					<div class="cam-tile" onmouseover="onTileMouseover(this);" onmouseout="onTileMouseout(this);" style="background-image: url('./img/icons/security-camera-svgrepo-com.svg');">
+						<div class="cam-tile-alert-bar">
+							<div class="cam-title-name">Camera Name #1!</div>
+							<div class="cam-tile-alert"></div>
+							<div class="cam-tile-alert"></div>
+							<div class="cam-tile-alert"></div>
+						</div>
+						<div hidden class="cam-tile-status">A whole bunccccch of filler text. Usually camera status parameters would be shown here. Yay camera data!</div>
+					</div>
+					<div class="cam-tile" onmouseover="onTileMouseover(this);" onmouseout="onTileMouseout(this);" style="background-image: url('./img/icons/security-camera-svgrepo-com (1).svg');">
+						<div class="cam-tile-alert-bar">
+							<div class="cam-title-name">Camera Name #2!</div>
+							<div class="cam-tile-alert"></div>
+							<div class="cam-tile-alert"></div>
+							<div class="cam-tile-alert"></div>
+						</div>
+						<div hidden class="cam-tile-status">A whole bunccccch of filler text. Usually camera status parameters would be shown here. Yay camera data!</div>
+					</div>
+					<div class="cam-tile" onmouseover="onTileMouseover(this);" onmouseout="onTileMouseout(this);" style="background-image: url('./img/icons/security-camera-svgrepo-com.svg');">
+						<div class="cam-tile-alert-bar">
+							<div class="cam-title-name">Camera Name #3!</div>
+							<div class="cam-tile-alert"></div>
+							<div class="cam-tile-alert"></div>
+							<div class="cam-tile-alert"></div>
+						</div>
+						<div hidden class="cam-tile-status">A whole bunccccch of filler text. Usually camera status parameters would be shown here. Yay camera data!</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+			
+		</div>
+	</body>
+</html>

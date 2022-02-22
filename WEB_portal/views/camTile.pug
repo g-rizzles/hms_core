@@ -1,0 +1,15 @@
+//- Camera tile mixin
+mixin camTile(cam)
+    div.cam-tile(id=cam.id onmouseover='onTileMouseover(this);' onmouseout='onTileMouseout(this);' style='background-image: url("/img/icons/' + cam.avatar + '");')
+        div.cam-tile-alert-bar
+            div.cam-title-name(id=cam.id + '-nickname')= cam.nickname
+            div.cam-tile-alert(id=cam.id + '-alert-error')
+            div.cam-tile-alert(id=cam.id + '-alert-motion')    
+            if cam.alive 
+                div.cam-tile-alert(id=cam.id + '-alert-alive').alive
+            else
+                div.cam-tile-alert(id=cam.id + '-alert-alive').dead
+        div.cam-tile-status(hidden) 
+            +cameraStatusTable(cam)
+            div(style="display: flex; justify-content: center;")
+                div.settings-button(id= cam.id + '-stream' onclick=`onStartVideoButton(${cam.id})`).add Start Stream

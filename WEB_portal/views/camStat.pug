@@ -1,0 +1,58 @@
+//- Camera status mixin
+//-mixin cameraStatusTable(cam)
+    table
+        tr
+            td(colspan="2") Time On: 
+            td(id=cam.id + '-ST' colspan="3")= 'Loading data...'
+            td (seconds)
+        tr 
+            td(colspan="2") Battery:
+            td(id=cam.id + '-BV' colspan="3")= 'Loading data...'
+            td (Volts)
+        tr 
+            td(colspan="2") Aux Input:
+            td(id=cam.id + '-AV' colspan="3")= 'Loading data...'
+            td (Volts)
+        tr 
+            td(colspan="5") Discrete LEDs: 
+            td= 'Loading data...'
+        tr 
+            td(colspan="6") Load Switches:
+        tr 
+            td O1
+            td= 'Loading data...'
+            td O2
+            td= 'Loading data...'
+            td O3
+            td= 'Loading data...'
+
+mixin cameraStatusTable(cam)
+    div.cam-tile-display-container
+        div.cam-tile-display-value
+            div.cam-tile-display-value-label Time on:
+            div.cam-tile-display-value-value(id=cam.id + '-ST') Loading data...
+            div.cam-tile-display-value-units (S)
+        div.cam-tile-display-value
+            div.cam-tile-display-value-label Temperature:
+            div.cam-tile-display-value-value(id=cam.id + '-TP') Loading data...
+            div.cam-tile-display-value-units (C)
+        div.cam-tile-display-value
+            div.cam-tile-display-value-label Battery:
+            div.cam-tile-display-value-value(id=cam.id + '-BV') Loading data...
+            div.cam-tile-display-value-units (V)
+        div.cam-tile-display-value
+            div.cam-tile-display-value-label Battery:
+            div.cam-tile-display-value-value(id=cam.id + '-BI') Loading data...
+            div.cam-tile-display-value-units (A)
+        div.cam-tile-display-value
+            div.cam-tile-display-value-label Auxiliary:
+            div.cam-tile-display-value-value(id=cam.id + '-AV') Loading data...
+            div.cam-tile-display-value-units (V)
+        div.cam-tile-display-value
+            div.cam-tile-display-value-label Auxiliary:
+            div.cam-tile-display-value-value(id=cam.id + '-AI') Loading data...
+            div.cam-tile-display-value-units (A)
+        div.cam-tile-display-enum.off(id=cam.id + 'O1') LSW1
+        div.cam-tile-display-enum.off(id=cam.id + 'O2') LSW2
+        div.cam-tile-display-enum.off(id=cam.id + 'O3') LSW3
+        div.cam-tile-display-enum.off(id=cam.id + 'DL') LEDS

@@ -1,0 +1,23 @@
+{
+  "name": "js",
+  "version": "1.0.0",
+  "description": "Home Monitoring System internet entry point server.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.4",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "crypto-js": "^4.1.1",
+    "express": "^4.17.1",
+    "json-server": "^0.16.3",
+    "multer": "^1.4.3",
+    "node-static": "^0.7.11",
+    "pug": "^3.0.2",
+    "ws": "^8.3.0"
+  }
+}
