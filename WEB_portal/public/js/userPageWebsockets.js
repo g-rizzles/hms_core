@@ -194,7 +194,7 @@ function testRadarThresh(thresh)
 {
     let camCmd = {
         meta: {
-            authcode: "4117498b01e82d40324a010b1c705afc94c3ba625a8a5fd16cc54797a8f27f23",
+            authcode: "CB35695F7916425F24DCA418EAEC992C97B20C36D12E24991669D44F0D7AFD17",
             camId: "6969420",
         },
         _C: 43,
@@ -212,7 +212,7 @@ function testGetConfigs()
 {
     let camCmd = {
         meta: {
-            authcode: "4117498b01e82d40324a010b1c705afc94c3ba625a8a5fd16cc54797a8f27f23",
+            authcode: "CB35695F7916425F24DCA418EAEC992C97B20C36D12E24991669D44F0D7AFD17",
             camId: "6969420",
         },
         _C: 67,
