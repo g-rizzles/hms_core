@@ -13,7 +13,7 @@
         "localSecureZones": [
           {
             "id": 1,
-            "url": "ws://hms_core:3000",
+            "url": "ws://192.168.1.87:3000",
             "salt": "AppleBagleCelereyDurrian"
           }
         ]
